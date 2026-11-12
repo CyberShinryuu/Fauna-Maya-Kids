@@ -42,16 +42,12 @@
     <!-- Header / Navbar -->
     <header class="bg-white shadow-md sticky top-0 z-40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
+            <div class="flex justify-between items-center h-24">
                 <!-- Logo -->
                 <div class="flex items-center space-x-3">
-                    <div class="bg-brand-green text-white p-2.5 rounded-full flex items-center justify-center">
-                        <i class="fa-solid fa-leaf text-2xl"></i>
-                    </div>
-                    <div>
-                        <span class="text-2xl font-bold font-heading text-brand-green tracking-wide block leading-none">Fauna Maya</span>
-                        <span class="text-xs font-bold text-brand-orange uppercase tracking-widest">KIDS</span>
-                    </div>
+                    <a href="#" class="flex items-center space-x-3 group py-2">
+                        <img src="imagenes/fmk.jpeg" alt="Fauna Maya Kids Logo" class="h-16 md:h-20 w-auto object-contain transform group-hover:scale-105 transition">
+                    </a>
                 </div>
 
                 <!-- Info Badges -->
@@ -181,54 +177,48 @@
         // Products Catalog
         const products = [
             // Tazas
-            { id: 1, type: 'taza', name: 'Taza Tortuga', price: 90, icon: 'fa-turtle', color: 'from-emerald-400 to-teal-500', bgIcon: '🐢', image: 'imagenes/Tortuga.jpg' },
-            { id: 2, type: 'taza', name: 'Taza Jaguar', price: 90, icon: 'fa-cat', color: 'from-amber-400 to-orange-500', bgIcon: '🐆', image: 'imagenes/Jaguar.jpg' },
-            { id: 3, type: 'taza', name: 'Taza Mono Araña', price: 90, icon: 'fa-vector-square', color: 'from-orange-400 to-red-400', bgIcon: '🐒', image: 'imagenes/Mono.jpg' },
-            { id: 4, type: 'taza', name: 'Taza Coatí', price: 90, icon: 'fa-dog', color: 'from-stone-400 to-amber-600', bgIcon: '🦝', image: 'imagenes/Coati.jpg' },
-            { id: 5, type: 'taza', name: 'Taza Delfín', price: 90, icon: 'fa-fish', color: 'from-cyan-400 to-blue-500', bgIcon: '🐬', image: 'imagenes/Delfin.jpg' },
-            { id: 6, type: 'taza', name: 'Taza Gaviota', price: 90, icon: 'fa-feather', color: 'from-sky-300 to-indigo-400', bgIcon: '🕊️', image: 'imagenes/Gaviota.jpg' },
-            { id: 7, type: 'taza', name: 'Taza Ardilla', price: 90, icon: 'fa-tree', color: 'from-orange-500 to-amber-700', bgIcon: '🐿️', image: 'imagenes/Ardilla.jpg' },
-            { id: 8, type: 'taza', name: 'Taza Mapache', price: 90, icon: 'fa-dog', color: 'from-stone-400 to-amber-600', bgIcon: '🦝', image: 'imagenes/Mapache.jpg' },
+            { id: 1, type: 'taza', name: 'Taza Tortuga', price: 90, icon: 'fa-turtle', color: 'from-emerald-400 to-teal-500', bgIcon: '🐢', image: 'IMAGENES/Tortuga.jpg' },
+            { id: 2, type: 'taza', name: 'Taza Jaguar', price: 90, icon: 'fa-cat', color: 'from-amber-400 to-orange-500', bgIcon: '🐆', image: 'IMAGENES/Jaguar.jpg' },
+            { id: 3, type: 'taza', name: 'Taza Mono Araña', price: 90, icon: 'fa-vector-square', color: 'from-orange-400 to-red-400', bgIcon: '🐒', image: 'IMAGENES/Mono.jpg' },
+            { id: 4, type: 'taza', name: 'Taza Coatí', price: 90, icon: 'fa-dog', color: 'from-stone-400 to-amber-600', bgIcon: '🦝', image: 'IMAGENES/Coati.jpg' },
+            { id: 5, type: 'taza', name: 'Taza Delfín', price: 90, icon: 'fa-fish', color: 'from-cyan-400 to-blue-500', bgIcon: '🐬', image: 'IMAGENES/Delfin.jpg' },
+            { id: 6, type: 'taza', name: 'Taza Gaviota', price: 90, icon: 'fa-feather', color: 'from-sky-300 to-indigo-400', bgIcon: '🕊️', image: 'IMAGENES/Gaviota.jpg' },
+            { id: 7, type: 'taza', name: 'Taza Ardilla', price: 90, icon: 'fa-tree', color: 'from-orange-500 to-amber-700', bgIcon: '🐿️', image: 'IMAGENES/Ardilla.jpg' },
+            { id: 8, type: 'taza', name: 'Taza Mapache', price: 90, icon: 'fa-dog', color: 'from-stone-400 to-amber-600', bgIcon: '🦝', image: 'IMAGENES/Mapache.jpg' },
             
             // Bolsas de Manta
-            // AQUÍ PUEDES CAMBIAR EL TAMAÑO CAMBIANDO "object-cover p-2" O "object-contain p-4"
-            { id: 9, type: 'bolsa', name: 'Bolsa Manta Delfín', price: 150, icon:  'fa-bag-shopping', color: 'from-cyan-300 to-blue-400', bgIcon: '🐬', image: 'imagenes/bdelfin.jpg', imgClass: 'object-contain p-4' },
-            { id: 10, type: 'bolsa', name: 'Bolsa Manta Tortuga', price: 150, icon: 'fa-bag-shopping', color: 'from-emerald-400 to-teal-500', bgIcon: '🐢', image: 'imagenes/btortuga.jpg', imgClass: 'object-contain p-4' },
-            { id: 11, type: 'bolsa', name: 'Bolsa Manta Jaguar', price: 150, icon: 'fa-bag-shopping', color: 'from-amber-400 to-orange-500', bgIcon: '🐆', image: 'imagenes/bjaguar.jpg', imgClass: 'object-contain p-4' },
-            { id: 12, type: 'bolsa', name: 'Bolsa Manta Coati', price: 150, icon: 'fa-bag-shopping', color: 'from-stone-400 to-amber-600', bgIcon: '🦝', image: 'imagenes/bcoati.jpg', imgClass: 'object-contain p-4' },
-            { id: 13, type: 'bolsa', name: 'Bolsa Manta Mono', price: 150, icon: 'fa-bag-shopping', color: 'from-orange-400 to-red-400', bgIcon: '🐒', image: 'imagenes/bmono.jpg', imgClass: 'object-contain p-4' },
-            { id: 14, type: 'bolsa', name: 'Bolsa Manta Gaviota', price: 150, icon: 'fa-bag-shopping', color: 'from-sky-300 to-indigo-400', bgIcon: '🕊️', image: 'imagenes/bgaviota.jpg', imgClass: 'object-contain p-4' },
-            { id: 15, type: 'bolsa', name: 'Bolsa Manta Ardilla', price: 150, icon: 'fa-bag-shopping', color: 'from-orange-500 to-amber-700', bgIcon: '🐿️', image: 'imagenes/bardilla.jpg', imgClass: 'object-contain p-4' },
-            { id: 16, type: 'bolsa', name: 'Bolsa Manta Mapache', price: 150, icon: 'fa-bag-shopping', color: 'from-slate-300 to-gray-400', bgIcon: '🦝', image: 'imagenes/bmapache.jpg', imgClass: 'object-contain p-4' },
-
+            { id: 9, type: 'bolsa', name: 'Bolsa Manta Delfín', price: 150, icon: 'fa-bag-shopping', color: 'from-cyan-300 to-blue-400', bgIcon: '🐬', image: 'IMAGENES/bdelfin.jpg', imgClass: 'object-contain p-4' },
+            { id: 10, type: 'bolsa', name: 'Bolsa Manta Tortuga', price: 150, icon: 'fa-bag-shopping', color: 'from-emerald-400 to-teal-500', bgIcon: '🐢', image: 'IMAGENES/btortuga.jpg', imgClass: 'object-contain p-4' },
+            { id: 11, type: 'bolsa', name: 'Bolsa Manta Jaguar', price: 150, icon: 'fa-bag-shopping', color: 'from-amber-400 to-orange-500', bgIcon: '🐆', image: 'IMAGENES/bjaguar.jpg', imgClass: 'object-contain p-4' },
+            { id: 12, type: 'bolsa', name: 'Bolsa Manta Coatí', price: 150, icon: 'fa-bag-shopping', color: 'from-stone-400 to-amber-600', bgIcon: '🦝', image: 'IMAGENES/bcoati.jpg', imgClass: 'object-contain p-4' },
+            { id: 13, type: 'bolsa', name: 'Bolsa Manta Mono', price: 150, icon: 'fa-bag-shopping', color: 'from-orange-400 to-red-400', bgIcon: '🐒', image: 'IMAGENES/bmono.jpg', imgClass: 'object-contain p-4' },
+            { id: 14, type: 'bolsa', name: 'Bolsa Manta Gaviota', price: 150, icon: 'fa-bag-shopping', color: 'from-sky-300 to-indigo-400', bgIcon: '🕊️', image: 'IMAGENES/bgaviota.jpg', imgClass: 'object-contain p-4' },
+            { id: 15, type: 'bolsa', name: 'Bolsa Manta Ardilla', price: 150, icon: 'fa-bag-shopping', color: 'from-orange-500 to-amber-700', bgIcon: '🐿️', image: 'IMAGENES/bardilla.jpg', imgClass: 'object-contain p-4' },
+            { id: 16, type: 'bolsa', name: 'Bolsa Manta Mapache', price: 150, icon: 'fa-bag-shopping', color: 'from-slate-300 to-gray-400', bgIcon: '🦝', image: 'IMAGENES/bmapache.jpg', imgClass: 'object-contain p-4' },
 
             // Imanes
-            { id: 17, type: 'iman', name: 'Imán Delfín', price: 0, icon: 'fa-magnet', color: 'from-cyan-300 to-blue-400', bgIcon: '🐬', image: 'imagenes/fmksoon.jpg', imgClass: 'object-contain p-1' },
-            { id: 18, type: 'iman', name: 'Imán Tortuga', price: 0, icon: 'fa-magnet', color: 'from-emerald-300 to-teal-400', bgIcon: '🐢', image: 'imagenes/fmksoon.jpg', imgClass: 'object-contain p-1' },
-            { id: 19, type: 'iman', name: 'Imán Jaguar', price: 0, icon: 'fa-magnet', color: 'from-amber-300 to-orange-400', bgIcon: '🐆', image: 'imagenes/fmksoon.jpg', imgClass: 'object-contain p-1' },
-            { id: 20, type: 'iman', name: 'Imán Mono Araña', price: 0, icon: 'fa-magnet', color: 'from-orange-300 to-red-300', bgIcon: '🐒', image: 'imagenes/fmksoon.jpg', imgClass: 'object-contain p-1' },
-            { id: 21, type: 'iman', name: 'Imán Coatí', price: 0, icon: 'fa-magnet', color: 'from-stone-300 to-amber-500', bgIcon: '🦝', image: 'imagenes/fmksoon.jpg', imgClass: 'object-contain p-1' },
-            { id: 22, type: 'iman', name: 'Imán Mapache', price: 0, icon: 'fa-magnet', color: 'from-gray-300 to-stone-500', bgIcon: '🦝', image: 'imagenes/fmksoon.jpg', imgClass: 'object-contain p-1' },,
-            { id: 23, type: 'iman', name: 'Imán Gaviota', price: 0, icon: 'fa-magnet', color: 'from-sky-300 to-indigo-300', bgIcon: '🕊️', image: 'imagenes/fmksoon.jpg', imgClass: 'object-contain p-1' },
-            { id: 24, type: 'iman', name: 'Imán Ardilla', price: 0, icon: 'fa-magnet', color: 'from-slate-300 to-gray-400', bgIcon: '🦝', image:'imagenes/fmksoon.jpg', imgClass: 'object-contain p-1' },
-
+            { id: 17, type: 'iman', name: 'Imán Tucan', price: 30, icon: 'fa-magnet', color: 'from-cyan-300 to-blue-400', bgIcon: '🐬', image: 'imagenes/imatucan.jpg', imgClass: 'object-contain p-1' },
+            { id: 18, type: 'iman', name: 'Imán Tortuga', price: 30, icon: 'fa-magnet', color: 'from-emerald-300 to-teal-400', bgIcon: '🐢', image: 'imagenes/imatortuga.jpg', imgClass: 'object-contain p-1' },
+            { id: 19, type: 'iman', name: 'Imán Jaguar', price: 30, icon: 'fa-magnet', color: 'from-amber-300 to-orange-400', bgIcon: '🐆', image: 'imagenes/imajaguar.jpg', imgClass: 'object-contain p-1' },
+            { id: 20, type: 'iman', name: 'Imán Mono Araña', price: 30, icon: 'fa-magnet', color: 'from-orange-300 to-red-300', bgIcon: '🐒', image: 'imagenes/imamonoarana.jpg', imgClass: 'object-contain p-1' },
+            { id: 21, type: 'iman', name: 'Imán Coatí', price: 30, icon: 'fa-magnet', color: 'from-stone-300 to-amber-500', bgIcon: '🦝', image: 'imagenes/imacoati.jpg', imgClass: 'object-contain p-1' },
+            { id: 22, type: 'iman', name: 'Imán Mapache', price: 30, icon: 'fa-magnet', color: 'from-gray-300 to-stone-500', bgIcon: '🦝', image: 'imagenes/imamapache.jpg', imgClass: 'object-contain p-1' },
+            { id: 23, type: 'iman', name: 'Imán Gaviota', price: 30, icon: 'fa-magnet', color: 'from-sky-300 to-indigo-300', bgIcon: '🕊️', image: 'imagenes/imagaviota.jpg', imgClass: 'object-contain p-1' },
+            { id: 24, type: 'iman', name: 'Imán Ardilla', price: 30, icon: 'fa-magnet', color: 'from-slate-300 to-gray-400', bgIcon: '🦝', image: 'imagenes/imaardilla.jpg', imgClass: 'object-contain p-1' },
+            { id: 25, type: 'iman', name: 'Imán Delfín', price: 30, icon: 'fa-magnet', color: 'from-cyan-300 to-blue-400', bgIcon: '🐬', image: 'imagenes/imadelfin.jpg', imgClass: 'object-contain p-1' }
         ];
 
         let cart = [];
 
-        // Badge label dynamic text
         function getCategoryLabel(type) {
             switch(type) {
                 case 'taza': return '☕';
                 case 'bolsa': return '👜';
                 case 'iman': return '🧲';
-                case 'sticker': return '🏷️';
-                case 'sticker': return '🐾';
                 default: return '';
             }
         }
 
-        // Render products
         function renderProducts(items) {
             const grid = document.getElementById('product-grid');
 
@@ -246,7 +236,6 @@
             grid.innerHTML = items.map(product => `
                 <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition flex flex-col justify-between">
                     <div>
-                        <!-- Product Image Placeholder or Real Image -->
                         <div class="h-48 bg-gradient-to-br ${product.color} flex flex-col items-center justify-center text-white relative overflow-hidden">
                             ${product.image ? `
                                 <img src="${product.image}" alt="${product.name}" class="w-full h-full ${product.imgClass || 'object-cover'} transform hover:scale-110 transition cursor-pointer" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\'text-6xl drop-shadow-md transform hover:scale-110 transition cursor-pointer\'>${product.bgIcon}</span>';">
@@ -274,7 +263,6 @@
             `).join('');
         }
 
-        // Filter Function
         function filterProducts(category) {
             document.querySelectorAll('.filter-btn').forEach(btn => {
                 btn.classList.remove('bg-brand-green', 'text-white');
@@ -295,7 +283,6 @@
             }
         }
 
-        // Cart Actions
         function addToCart(id) {
             const product = products.find(p => p.id === id);
             const existing = cart.find(item => item.id === id);
